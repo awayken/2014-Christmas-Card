@@ -17,5 +17,8 @@
     "card"
   ],
   "author": "Miles Rausch",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.10"
+  }
 }
