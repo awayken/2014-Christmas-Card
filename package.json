@@ -1,0 +1,27 @@
+{
+  "name": "2014-christmas-card",
+  "version": "1.0.0",
+  "description": "A new parody from the creators of Newsbleep, Dear Future Kids and Man I Love This Show! One family. Told minute by minute. Hosted by Holli Rausch.",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:awayken/2014-christmas-card.git"
+  },
+  "keywords": [
+    "serial",
+    "parody",
+    "christmas",
+    "card"
+  ],
+  "author": "Miles Rausch",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-jshint": "^1.9.0",
+    "gulp-load-plugins": "^0.7.1",
+    "jshint-stylish": "^1.0.0"
+  }
+}
