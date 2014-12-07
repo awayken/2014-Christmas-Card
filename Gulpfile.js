@@ -3,6 +3,8 @@
 var gulp = require('gulp'),
     plug = require('gulp-load-plugins')();
 
+var CONNECT_PORT = 9000;
+
 var base = {
     src: './src',
     dist: './dist'
@@ -12,7 +14,7 @@ var src = {
     css: base.src + '/css/*.css',
     html: base.src + '/html/**',
     images: base.src + '/images/**',
-    javascript: base.src + '/javascript/*.js',
+    javascript: base.src + '/javascript/**/*.js',
     static: base.src + '/static/**'
 };
 
@@ -55,3 +57,38 @@ gulp.task('html', function() {
 });
 
 gulp.task('default', [ 'html', 'static', 'images', 'styles', 'scripts' ]);
+
+gulp.task('connect', [ 'default' ], function () {
+    var serveStatic = require('serve-static'),
+        serveIndex = require('serve-index');
+
+    var app = require('connect')()
+        .use( require('connect-livereload')({
+            port: 35729
+        }) )
+        //.use(serveStatic('.tmp'))
+        .use( serveStatic('dist') )
+        .use( serveIndex('dist') );
+
+    require('http').createServer( app )
+        .listen( CONNECT_PORT )
+        .on('listening', function () {
+            console.log('Started connect web server on http://localhost:' + CONNECT_PORT );
+        });
+});
+
+/*
+gulp.task('watch', [ 'connect' ], function () {
+    plug.livereload.listen();
+
+    gulp.watch([ src.html, src.static, src.javascript, src.css ])
+        .on('change', function() {
+            gulp.run('default');
+            plug.livereload.changed();
+        });
+    });
+*/
+
+gulp.task('serve', [ 'connect' ], function () {
+    require('opn')('http://localhost:' + CONNECT_PORT );
+});
