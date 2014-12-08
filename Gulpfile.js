@@ -84,18 +84,53 @@ gulp.task('connect', [ 'default' ], function () {
         });
 });
 
+
+
+
 gulp.task('watch', [ 'connect' ], function () {
+    var reload = false;
+
     g$.livereload.listen();
 
-    gulp.watch([
-        src.html,
-        src.static,
-        src.javascript,
-        src.css
-    ]).on('change', function() {
-        gulp.run('default');
-        g$.livereload.changed();
-    });
+    gulp
+        .watch( src.html, ['html'])
+        .on('change', function() {
+            setTimeout(function() {
+                g$.livereload.changed();
+            }, 300 );
+        });
+
+    gulp
+        .watch( src.static, ['static'])
+        .on('change', function() {
+            setTimeout(function() {
+                g$.livereload.changed();
+            }, 300 );
+        });
+
+    gulp
+        .watch( src.images, ['images'])
+        .on('change', function() {
+            setTimeout(function() {
+                g$.livereload.changed();
+            }, 300 );
+        });
+
+    gulp
+        .watch( src.css, ['styles'])
+        .on('change', function() {
+            setTimeout(function() {
+                g$.livereload.changed();
+            }, 300 );
+        });
+
+    gulp
+        .watch( src.javascript, ['scripts'])
+        .on('change', function() {
+            setTimeout(function() {
+                g$.livereload.changed();
+            }, 300 );
+        });
 });
 
 gulp.task('serve', [ 'connect' ], function () {
