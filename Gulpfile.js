@@ -1,7 +1,10 @@
 'use strict';
 
 var gulp = require('gulp'),
-    plug = require('gulp-load-plugins')();
+    g$ = require('gulp-load-plugins')();
+
+
+
 
 var CONNECT_PORT = 9000;
 
@@ -24,11 +27,14 @@ var dest = {
     styles: base.dist + '/styles'
 };
 
+
+
+
 gulp.task('jshint', function() {
     return gulp.src( src.javascript )
-        .pipe( plug.jshint() )
-        .pipe( plug.jshint.reporter('jshint-stylish') )
-        .pipe( plug.jshint.reporter('fail') );
+        .pipe( g$.jshint() )
+        .pipe( g$.jshint.reporter('jshint-stylish') )
+        .pipe( g$.jshint.reporter('fail') );
 });
 
 gulp.task('scripts', [ 'jshint' ], function() {
@@ -56,7 +62,8 @@ gulp.task('html', function() {
         .pipe( gulp.dest( base.dist ) );
 });
 
-gulp.task('default', [ 'html', 'static', 'images', 'styles', 'scripts' ]);
+
+
 
 gulp.task('connect', [ 'default' ], function () {
     var serveStatic = require('serve-static'),
@@ -66,29 +73,36 @@ gulp.task('connect', [ 'default' ], function () {
         .use( require('connect-livereload')({
             port: 35729
         }) )
-        //.use(serveStatic('.tmp'))
         .use( serveStatic('dist') )
         .use( serveIndex('dist') );
 
-    require('http').createServer( app )
+    require('http')
+        .createServer( app )
         .listen( CONNECT_PORT )
-        .on('listening', function () {
+        .on('listening', function() {
             console.log('Started connect web server on http://localhost:' + CONNECT_PORT );
         });
 });
 
-/*
 gulp.task('watch', [ 'connect' ], function () {
-    plug.livereload.listen();
+    g$.livereload.listen();
 
-    gulp.watch([ src.html, src.static, src.javascript, src.css ])
-        .on('change', function() {
-            gulp.run('default');
-            plug.livereload.changed();
-        });
+    gulp.watch([
+        src.html,
+        src.static,
+        src.javascript,
+        src.css
+    ]).on('change', function() {
+        gulp.run('default');
+        g$.livereload.changed();
     });
-*/
+});
 
 gulp.task('serve', [ 'connect' ], function () {
     require('opn')('http://localhost:' + CONNECT_PORT );
 });
+
+
+
+
+gulp.task('default', [ 'html', 'static', 'images', 'styles', 'scripts' ]);
