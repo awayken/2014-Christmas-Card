@@ -88,8 +88,6 @@ gulp.task('connect', [ 'default' ], function () {
 
 
 gulp.task('watch', [ 'connect' ], function () {
-    var reload = false;
-
     g$.livereload.listen();
 
     gulp
