@@ -14,11 +14,11 @@ var base = {
 };
 
 var src = {
-    css: base.src + '/css/*.css',
     html: base.src + '/html/**',
     images: base.src + '/images/**',
     javascript: base.src + '/javascript/**/*.js',
-    static: base.src + '/static/**'
+    static: base.src + '/static/**',
+    stylus: base.src + '/stylus/*.styl'
 };
 
 var dest = {
@@ -43,7 +43,8 @@ gulp.task('scripts', [ 'jshint' ], function() {
 });
 
 gulp.task('styles', function() {
-    return gulp.src( src.css )
+    return gulp.src( src.stylus )
+        .pipe( g$.stylus() )
         .pipe( gulp.dest( dest.styles ) );
 });
 
@@ -60,6 +61,17 @@ gulp.task('static', function() {
 gulp.task('html', function() {
     return gulp.src( src.html )
         .pipe( gulp.dest( base.dist ) );
+});
+
+
+
+
+gulp.task('clean', function( cb ) {
+    var trash = require('trash');
+
+    trash( [ base.dist ], function() {
+        cb();
+    });
 });
 
 
@@ -138,4 +150,4 @@ gulp.task('serve', [ 'connect' ], function () {
 
 
 
-gulp.task('default', [ 'html', 'static', 'images', 'styles', 'scripts' ]);
+gulp.task('default', [ 'clean', 'html', 'static', 'images', 'styles', 'scripts' ]);
