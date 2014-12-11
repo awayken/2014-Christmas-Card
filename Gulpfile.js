@@ -127,7 +127,7 @@ gulp.task('watch', [ 'connect' ], function () {
         });
 
     gulp
-        .watch( src.css, ['styles'])
+        .watch( base.src + '/stylus/**/*.styl', ['styles'])
         .on('change', function() {
             setTimeout(function() {
                 g$.livereload.changed();
