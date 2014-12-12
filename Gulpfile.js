@@ -14,6 +14,7 @@ var base = {
 };
 
 var src = {
+    fonts: base.src + '/fonts/**',
     html: base.src + '/html/**',
     images: base.src + '/images/**',
     javascript: base.src + '/javascript/**/*.js',
@@ -22,6 +23,7 @@ var src = {
 };
 
 var dest = {
+    fonts: base.dist + '/fonts',
     images: base.dist + '/images',
     scripts: base.dist + '/scripts',
     styles: base.dist + '/styles'
@@ -51,6 +53,11 @@ gulp.task('styles', function() {
 gulp.task('images', function() {
     return gulp.src( src.images )
         .pipe( gulp.dest( dest.images ) );
+});
+
+gulp.task('fonts', function() {
+    return gulp.src( src.fonts )
+        .pipe( gulp.dest( dest.fonts ) );
 });
 
 gulp.task('static', function() {
@@ -150,4 +157,4 @@ gulp.task('serve', [ 'connect' ], function () {
 
 
 
-gulp.task('default', [ 'clean', 'html', 'static', 'images', 'styles', 'scripts' ]);
+gulp.task('default', [ 'clean', 'html', 'static', 'fonts', 'images', 'styles', 'scripts' ]);
