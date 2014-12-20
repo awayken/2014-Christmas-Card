@@ -1,12 +1,6 @@
 // Base styles
 
-$size-base = 1.125em;
-
-$color-white = rgb(255, 255, 255);
-$color-gray = rgb(37, 37, 37);
-$color-black = rgb(0, 0, 0);
-$color-sepia = rgb(242, 240, 200);
-$color-red = rgb(237, 27, 37);
+@require 'variables';
 
 * {
     box-sizing: border-box;
@@ -15,8 +9,9 @@ $color-red = rgb(237, 27, 37);
 body {
     background: $color-white;
     color: $color-black;
-    font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
-    font-size: $size-base;
+    font-family: $font-helvetica;
+    font-size: $size-font-base;
+    line-height: 2;
 }
 
 h1,
@@ -25,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "SackersGothicW01-Medium", helvetica, arial, sans-serif;
+    font-family: $font-sackers;
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
