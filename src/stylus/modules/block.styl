@@ -1,6 +1,7 @@
 // A block is the base module
 
 @require '../utilities/variables';
+@require '../utilities/functions';
 
 .block {
     margin: 0 auto;
@@ -9,5 +10,16 @@
 
     &--top {
         color: $color-sepia;
+    }
+
+    .gray &--top {
+        color: $color-white;
+    }
+
+    &--action {
+        fitcontent( 9em );
+
+        display: block;
+        margin: 0 auto;
     }
 }
