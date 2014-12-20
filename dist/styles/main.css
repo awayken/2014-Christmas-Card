@@ -446,9 +446,10 @@ p + p {
   color: #fff;
   display: inline-block;
   font-family: "FlamaBasic", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-size: 1.125em;
   line-height: 2em;
   padding: 0 1em;
-  font-size: 1.125em;
+  text-align: center;
 }
 .header {
   background: #f2f0c8;
@@ -483,4 +484,16 @@ p + p {
 }
 .block--top {
   color: #f2f0c8;
+}
+.gray .block--top {
+  color: #fff;
+}
+.block--action {
+  width: 9em;
+  width: intrinsic;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
 }
