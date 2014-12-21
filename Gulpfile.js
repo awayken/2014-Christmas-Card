@@ -157,4 +157,4 @@ gulp.task('serve', [ 'connect' ], function () {
 
 
 
-gulp.task('default', [ 'clean', 'html', 'static', 'fonts', 'images', 'styles', 'scripts' ]);
+gulp.task('default', [ 'html', 'static', 'fonts', 'images', 'styles', 'scripts' ]);
