@@ -74,9 +74,9 @@ gulp.task('html', function() {
 
 
 gulp.task('clean', function( cb ) {
-    var trash = require('trash');
+    var del = require('del');
 
-    trash( [ base.dist ], function() {
+    del( [ base.dist ], function() {
         cb();
     });
 });
