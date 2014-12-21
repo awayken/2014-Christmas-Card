@@ -393,6 +393,11 @@ textarea {
   }
 }
 @font-face {
+  font-family: "SackersGothicW01-Heavy";
+  src: url("/fonts/SackersGothicW01-Heavy.eot#iefix");
+  src: url("/fonts/SackersGothicW01-Heavy.eot#iefix") format("eot"), url("/fonts/SackersGothicW01-Heavy.woff") format("woff"), url("/fonts/SackersGothicW01-Heavy.ttf") format("truetype"), url("/fonts/SackersGothicW01-Heavy.svg#sackersgothicheavy") format("svg");
+}
+@font-face {
   font-family: "SackersGothicW01-Medium";
   src: url("/fonts/SackersGothicW01-Medium.eot#iefix");
   src: url("/fonts/SackersGothicW01-Medium.eot#iefix") format("eot"), url("/fonts/SackersGothicW01-Medium.woff") format("woff"), url("/fonts/SackersGothicW01-Medium.ttf") format("truetype"), url("/fonts/SackersGothicW01-Medium.svg#sackersgothic") format("svg");
@@ -401,6 +406,13 @@ textarea {
   font-family: 'FlamaBasic';
   src: url("/fonts/flama-basic-webfont.eot#iefix");
   src: url("/fonts/flama-basic-webfont.eot#iefix") format('embedded-opentype'), url("/fonts/flama-basic-webfont.woff") format('woff'), url("/fonts/flama-basic-webfont.ttf") format('truetype'), url("/fonts/flama-basic-webfont.svg#FlamaBasic") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FlamaLight';
+  src: url("/fonts/Flama-Light.eot#iefix");
+  src: url("/fonts/Flama-Light.eot#iefix") format('embedded-opentype'), url("/fonts/Flama-Light.woff") format('woff'), url("/fonts/Flama-Light.svg#FlamaLight") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -437,9 +449,16 @@ a:focus {
 p + p {
   margin: 0 0 1.5em;
 }
-.gray {
+.u--gray {
   background: #252525;
   color: #fff;
+}
+.u--cinch,
+.block,
+.episode--top-content,
+.episode--content {
+  margin: 0 auto;
+  max-width: 1024px;
 }
 .u--button {
   background: #ed1b25;
@@ -450,6 +469,14 @@ p + p {
   line-height: 2em;
   padding: 0 1em;
   text-align: center;
+}
+.u--list-inline {
+  margin: 0;
+  padding: 0;
+}
+.u--list-inline li {
+  display: inline-block;
+  vertical-align: top;
 }
 .header {
   background: #f2f0c8;
@@ -478,15 +505,17 @@ p + p {
   width: auto;
 }
 .block {
-  margin: 0 auto;
-  max-width: 1024px;
   padding: 2em 1em;
 }
 .block--top {
   color: #f2f0c8;
 }
-.gray .block--top {
+.u--gray .block--top {
   color: #fff;
+}
+.block--player {
+  display: inline-block;
+  vertical-align: top;
 }
 .block--action {
   width: 9em;
@@ -496,4 +525,56 @@ p + p {
   width: fit-content;
   display: block;
   margin: 0 auto;
+}
+.episode {
+  color: #fff;
+  padding: 0 0 3em;
+}
+.episode--1 {
+  background: url("/images/episode1.jpg") no-repeat center top transparent;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.episode--top {
+  background: #ed1b25;
+  background: rgba(240,46,25,0.8);
+  color: #fff;
+}
+.episode--top-content {
+  padding: 5em 2em 1em;
+}
+.episode--number {
+  background: url("/images/underline-white.png") repeat-x 0 bottom;
+  background-size: auto 2px;
+  display: inline-block;
+  font-family: "SackersGothicW01-Heavy", "Helvetica Neue", helvetica, arial, sans-serif;
+  line-height: 1;
+  margin: 0 0 0.25em;
+  padding: 0 0 0.5em;
+  text-transform: uppercase;
+}
+.episode--title {
+  font-size: 3em;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.episode--content {
+  padding: 1em 2em;
+}
+.episode--content p {
+  font-family: "FlamaLight", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-size: 1.35em;
+  line-height: 1.5;
+  margin: 0;
+}
+.episode--sharing {
+  display: inline-block;
+  margin-top: 2em;
+  vertical-align: top;
+}
+.episode--button {
+  background: #fff;
+  background: rgba(255,255,255,0.6);
+  color: #000;
 }

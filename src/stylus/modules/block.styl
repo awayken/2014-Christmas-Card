@@ -4,16 +4,20 @@
 @require '../utilities/functions';
 
 .block {
-    margin: 0 auto;
-    max-width: $size-width-content;
+    @extend $cinch;
     padding: 2em 1em;
 
     &--top {
         color: $color-sepia;
     }
 
-    .gray &--top {
+    .u--gray &--top {
         color: $color-white;
+    }
+
+    &--player {
+        display: inline-block;
+        vertical-align: top;
     }
 
     &--action {

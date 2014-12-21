@@ -1,0 +1,65 @@
+// Episode module
+
+.episode {
+    color: $color-white;
+    padding: 0 0 3em;
+
+    &--1 {
+        background: url("/images/episode1.jpg") no-repeat center top transparent;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    &--top {
+        background: $color-red;
+        background: $color-red-transparent;
+        color: $color-white;
+    }
+
+    &--top-content {
+        @extend $cinch;
+        padding: 5em 2em 1em;
+    }
+
+    &--number {
+        background: url("/images/underline-white.png") repeat-x 0 bottom;
+        background-size: auto 2px;
+        display: inline-block;
+        font-family: $font-sackers-heavy;
+        line-height: 1;
+        margin: 0 0 0.25em;
+        padding: 0 0 0.5em;
+        text-transform: uppercase;
+    }
+
+    &--title {
+        font-size: 3em;
+        line-height: 1.2;
+        margin: 0;
+        text-align: left;
+    }
+
+    &--content {
+        @extend $cinch;
+        padding: 1em 2em;
+
+        p {
+            font-family: $font-flamba-light;
+            font-size: 1.35em;
+            line-height: 1.5;
+            margin: 0;
+        }
+    }
+
+    &--sharing {
+        display: inline-block;
+        margin-top: 2em;
+        vertical-align: top;
+    }
+
+    &--button {
+        background: $color-white;
+        background: transparentify($color-white, $color-white, 0.6);
+        color: $color-black;
+    }
+}
