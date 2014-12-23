@@ -1,0 +1,29 @@
+// A block is the base module
+
+@require '../utilities/variables';
+@require '../utilities/functions';
+
+.block {
+    @extend $cinch;
+    padding: 2em 1em;
+
+    &--top {
+        color: $color-sepia;
+    }
+
+    .u--gray &--top {
+        color: $color-white;
+    }
+
+    &--player {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    &--action {
+        fitcontent( 9em );
+
+        display: block;
+        margin: 0 auto;
+    }
+}

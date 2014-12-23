@@ -1,0 +1,64 @@
+// Base styles
+
+@require 'variables';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: $color-white;
+    color: $color-black;
+    font-family: $font-helvetica;
+    font-size: 1em;
+    line-height: 2;
+
+    /* bigger
+    font-size: 1.125em
+    */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-sackers;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+a {
+    color: $color-red;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+p + p {
+    margin: 0 0 1.5em;
+}
+
+svg {
+    fill: currentColor;
+}
+
+.u--gray {
+    background: $color-gray;
+    color: $color-white;
+}
+
+$cinch {
+    margin: 0 auto;
+    max-width: $size-width-content;
+}
+
+.u--cinch {
+    @extend $cinch;
+}
