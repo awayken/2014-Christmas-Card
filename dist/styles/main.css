@@ -452,6 +452,9 @@ a:focus {
 p + p {
   margin: 0 0 1.5em;
 }
+svg {
+  fill: currentColor;
+}
 .u--gray {
   background: #252525;
   color: #fff;
@@ -469,9 +472,15 @@ p + p {
   display: inline-block;
   font-family: "FlamaBasic", "Helvetica Neue", helvetica, arial, sans-serif;
   font-size: 1.125em;
-  line-height: 2em;
-  padding: 0 1em;
+  line-height: 1.5;
+  padding: 0.25em 1em;
   text-align: center;
+}
+.u--icon {
+  display: inline-block;
+  height: 1.5em;
+  vertical-align: middle;
+  width: 1.5em;
 }
 .u--list-inline {
   margin: 0;
