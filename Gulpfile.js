@@ -22,6 +22,14 @@ var src = {
     stylus: base.src + '/stylus/*.styl'
 };
 
+var watch = {
+    html: src.html,
+    images: src.images,
+    javascript: src.javascript,
+    static: src.static,
+    stylus: base.src + '/stylus/**/*.styl'
+};
+
 var dest = {
     fonts: base.dist + '/fonts',
     images: base.dist + '/images',
@@ -110,7 +118,7 @@ gulp.task('watch', [ 'connect' ], function () {
     g$.livereload.listen();
 
     gulp
-        .watch( src.html, ['html'])
+        .watch( watch.html, ['html'])
         .on('change', function() {
             setTimeout(function() {
                 g$.livereload.changed();
@@ -118,7 +126,7 @@ gulp.task('watch', [ 'connect' ], function () {
         });
 
     gulp
-        .watch( src.static, ['static'])
+        .watch( watch.static, ['static'])
         .on('change', function() {
             setTimeout(function() {
                 g$.livereload.changed();
@@ -126,7 +134,7 @@ gulp.task('watch', [ 'connect' ], function () {
         });
 
     gulp
-        .watch( src.images, ['images'])
+        .watch( watch.images, ['images'])
         .on('change', function() {
             setTimeout(function() {
                 g$.livereload.changed();
@@ -134,7 +142,7 @@ gulp.task('watch', [ 'connect' ], function () {
         });
 
     gulp
-        .watch( base.src + '/stylus/**/*.styl', ['styles'])
+        .watch( watch.stylus, ['styles'])
         .on('change', function() {
             setTimeout(function() {
                 g$.livereload.changed();
@@ -142,7 +150,7 @@ gulp.task('watch', [ 'connect' ], function () {
         });
 
     gulp
-        .watch( src.javascript, ['scripts'])
+        .watch( watch.javascript, ['scripts'])
         .on('change', function() {
             setTimeout(function() {
                 g$.livereload.changed();
