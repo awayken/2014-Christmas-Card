@@ -394,25 +394,25 @@ textarea {
 }
 @font-face {
   font-family: "SackersGothicW01-Heavy";
-  src: url("/fonts/SackersGothicW01-Heavy.eot#iefix");
-  src: url("/fonts/SackersGothicW01-Heavy.eot#iefix") format("eot"), url("/fonts/SackersGothicW01-Heavy.woff") format("woff"), url("/fonts/SackersGothicW01-Heavy.ttf") format("truetype"), url("/fonts/SackersGothicW01-Heavy.svg#sackersgothicheavy") format("svg");
+  src: url("../fonts/SackersGothicW01-Heavy.eot#iefix");
+  src: url("../fonts/SackersGothicW01-Heavy.eot#iefix") format("eot"), url("../fonts/SackersGothicW01-Heavy.woff") format("woff"), url("../fonts/SackersGothicW01-Heavy.ttf") format("truetype"), url("../fonts/SackersGothicW01-Heavy.svg#sackersgothicheavy") format("svg");
 }
 @font-face {
   font-family: "SackersGothicW01-Medium";
-  src: url("/fonts/SackersGothicW01-Medium.eot#iefix");
-  src: url("/fonts/SackersGothicW01-Medium.eot#iefix") format("eot"), url("/fonts/SackersGothicW01-Medium.woff") format("woff"), url("/fonts/SackersGothicW01-Medium.ttf") format("truetype"), url("/fonts/SackersGothicW01-Medium.svg#sackersgothic") format("svg");
+  src: url("../fonts/SackersGothicW01-Medium.eot#iefix");
+  src: url("../fonts/SackersGothicW01-Medium.eot#iefix") format("eot"), url("../fonts/SackersGothicW01-Medium.woff") format("woff"), url("../fonts/SackersGothicW01-Medium.ttf") format("truetype"), url("../fonts/SackersGothicW01-Medium.svg#sackersgothic") format("svg");
 }
 @font-face {
   font-family: 'FlamaBasic';
-  src: url("/fonts/flama-basic-webfont.eot#iefix");
-  src: url("/fonts/flama-basic-webfont.eot#iefix") format('embedded-opentype'), url("/fonts/flama-basic-webfont.woff") format('woff'), url("/fonts/flama-basic-webfont.ttf") format('truetype'), url("/fonts/flama-basic-webfont.svg#FlamaBasic") format('svg');
+  src: url("../fonts/flama-basic-webfont.eot#iefix");
+  src: url("../fonts/flama-basic-webfont.eot#iefix") format('embedded-opentype'), url("../fonts/flama-basic-webfont.woff") format('woff'), url("../fonts/flama-basic-webfont.ttf") format('truetype'), url("../fonts/flama-basic-webfont.svg#FlamaBasic") format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FlamaLight';
-  src: url("/fonts/Flama-Light.eot#iefix");
-  src: url("/fonts/Flama-Light.eot#iefix") format('embedded-opentype'), url("/fonts/Flama-Light.woff") format('woff'), url("/fonts/Flama-Light.svg#FlamaLight") format('svg');
+  src: url("../fonts/Flama-Light.eot#iefix");
+  src: url("../fonts/Flama-Light.eot#iefix") format('embedded-opentype'), url("../fonts/Flama-Light.woff") format('woff'), url("../fonts/Flama-Light.svg#FlamaLight") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -556,7 +556,7 @@ svg {
   padding: 0 0 3em;
 }
 .episode--1 {
-  background: url("/images/episode1.jpg") no-repeat center top #252525;
+  background: url("../images/episode1.jpg") no-repeat center top #252525;
   background-size: cover;
 /* bigger
         background-position: center top;
@@ -575,7 +575,7 @@ svg {
         */
 }
 .episode--number {
-  background: url("/images/underline-white.png") repeat-x 0 bottom;
+  background: url("../images/underline-white.png") repeat-x 0 bottom;
   background-size: auto 2px;
   display: inline-block;
   font-family: "SackersGothicW01-Heavy", "Helvetica Neue", helvetica, arial, sans-serif;
