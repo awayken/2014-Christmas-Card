@@ -8,10 +8,19 @@
         background: url("../images/episode1.jpg") no-repeat center top $color-gray;
         background-size: cover;
 
-        /* bigger
-        background-position: center top;
-        background-attachment: fixed;
-        */
+        @media screen and (min-width: 767px) {
+            background-attachment: fixed;
+            background-position: center -7em;
+        }
+
+        @media screen and (min-width: 1023px) {
+            background-attachment: fixed;
+            background-position: center -25em;
+        }
+
+        @media screen and (min-width: 1279px) {
+            background-position: center -40em;
+        }
     }
 
     &--top {
@@ -24,9 +33,9 @@
         @extend $cinch;
         padding: 1em;
 
-        /* bigger
-        padding: 5em 2em 1em;
-        */
+        @media screen and (min-width: 767px) {
+            padding: 5em 2em 1em;
+        }
     }
 
     &--number {
@@ -40,9 +49,9 @@
         padding: 0 0 0.5em;
         text-transform: uppercase;
 
-        /* bigger
-        font-size: 1em;
-        */
+        @media screen and (min-width: 767px) {
+            font-size: 1em;
+        }
     }
 
     &--title {
@@ -55,9 +64,9 @@
             font-size: 2em;
         }
 
-        /* bigger
-        font-size: 3em;
-        */
+        @media screen and (min-width: 767px) {
+            font-size: 3em;
+        }
     }
 
     &--content {

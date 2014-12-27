@@ -558,10 +558,23 @@ svg {
 .episode--1 {
   background: url("../images/episode1.jpg") no-repeat center top #252525;
   background-size: cover;
-/* bigger
-        background-position: center top;
-        background-attachment: fixed;
-        */
+}
+@media screen and (min-width: 767px) {
+  .episode--1 {
+    background-attachment: fixed;
+    background-position: center -7em;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .episode--1 {
+    background-attachment: fixed;
+    background-position: center -25em;
+  }
+}
+@media screen and (min-width: 1279px) {
+  .episode--1 {
+    background-position: center -40em;
+  }
 }
 .episode--top {
   background: #ed1b25;
@@ -570,9 +583,11 @@ svg {
 }
 .episode--top-content {
   padding: 1em;
-/* bigger
-        padding: 5em 2em 1em;
-        */
+}
+@media screen and (min-width: 767px) {
+  .episode--top-content {
+    padding: 5em 2em 1em;
+  }
 }
 .episode--number {
   background: url("../images/underline-white.png") repeat-x 0 bottom;
@@ -584,22 +599,26 @@ svg {
   margin: 0 0 0.25em;
   padding: 0 0 0.5em;
   text-transform: uppercase;
-/* bigger
-        font-size: 1em;
-        */
+}
+@media screen and (min-width: 767px) {
+  .episode--number {
+    font-size: 1em;
+  }
 }
 .episode--title {
   font-size: 1.5em;
   line-height: 1.2;
   margin: 0;
   text-align: left;
-/* bigger
-        font-size: 3em;
-        */
 }
 @media screen and (min-width: 567px) {
   .episode--title {
     font-size: 2em;
+  }
+}
+@media screen and (min-width: 767px) {
+  .episode--title {
+    font-size: 3em;
   }
 }
 .episode--content {
