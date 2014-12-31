@@ -685,3 +685,8 @@ svg {
   display: block;
   margin: 0 auto 8px auto;
 }
+.footer {
+  background: #ebebeb;
+  font-size: 0.9em;
+  padding: 2em 0;
+}
