@@ -14,6 +14,7 @@ var base = {
 };
 
 var src = {
+    audio: base.src + '/audio/**',
     fonts: base.src + '/fonts/**',
     html: base.src + '/html/**',
     images: base.src + '/images/**',
@@ -31,6 +32,7 @@ var watch = {
 };
 
 var dest = {
+    audio: base.dist + '/audio',
     fonts: base.dist + '/fonts',
     images: base.dist + '/images',
     scripts: base.dist + '/scripts',
@@ -66,6 +68,11 @@ gulp.task('images', function() {
 gulp.task('fonts', function() {
     return gulp.src( src.fonts )
         .pipe( gulp.dest( dest.fonts ) );
+});
+
+gulp.task('audio', function() {
+    return gulp.src( src.audio )
+        .pipe( gulp.dest( dest.audio ) );
 });
 
 gulp.task('static', function() {
@@ -165,4 +172,4 @@ gulp.task('serve', [ 'connect' ], function () {
 
 
 
-gulp.task('default', [ 'html', 'static', 'fonts', 'images', 'styles', 'scripts' ]);
+gulp.task('default', [ 'html', 'static', 'audio', 'fonts', 'images', 'styles', 'scripts' ]);
