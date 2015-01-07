@@ -554,7 +554,7 @@ svg {
   vertical-align: top;
 }
 .block--action {
-  width: 9em;
+  width: 11em;
   width: intrinsic;
   width: -moz-fit-content;
   width: -webkit-fit-content;
@@ -585,6 +585,7 @@ svg {
 @media screen and (min-width: 1279px) {
   .episode--1 {
     background-position: center -40em;
+    background-size: 1320px auto;
   }
 }
 .episode--top {
