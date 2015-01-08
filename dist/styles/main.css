@@ -494,15 +494,14 @@ svg {
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: 'icomoon';
-  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  text-transform: none;
   line-height: 1;
-/* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+  text-transform: none;
 }
 .icon-download:before {
   content: "\e600";
@@ -521,12 +520,6 @@ svg {
 }
 .icon-IcoMoon:before {
   content: "\e605";
-}
-.u--icon {
-  display: inline-block;
-  height: 1.5em;
-  vertical-align: middle;
-  width: 1.5em;
 }
 .u--list-inline {
   margin: 0;
