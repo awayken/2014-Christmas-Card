@@ -82,6 +82,9 @@ gulp.task('static', function() {
 
 gulp.task('html', function() {
     return gulp.src( src.html )
+        .pipe( g$.usemin({
+            css: [ g$.rev() ]
+        }) )
         .pipe( gulp.dest( base.dist ) );
 });
 
