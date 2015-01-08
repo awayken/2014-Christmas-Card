@@ -648,9 +648,8 @@ svg {
   vertical-align: top;
 }
 .episode--button {
-  background: #fff;
-  background: rgba(255,255,255,0.6);
-  color: #000;
+  background: #ed1b25;
+  color: #fff;
 }
 .headshots {
   list-style: none;
